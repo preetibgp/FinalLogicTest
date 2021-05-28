@@ -10,7 +10,7 @@ To display all todo
 import 'package:flutter/material.dart';
 
 void main() {
-  return runApp(MaterialApp(title: 'TodoList', home: Tasks()));
+  return runApp(MaterialApp(title: 'Todo', home: Tasks()));
 }
 
 /// Task model
@@ -33,12 +33,8 @@ class TaskModel extends ChangeNotifier {
   }
 }
 
-import 'package:flutter/foundation.dart';
-import 'package:todolist/models/task.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'dart:convert';
 
-class TodoListModel extends ChangeNotifier {
+class TodoModel extends ChangeNotifier {
   List<TaskModel> tasks = [];
 
   void addTaks(TaskModel task) {
@@ -66,9 +62,6 @@ class TodoListModel extends ChangeNotifier {
   }
 }
   
-  
-  import 'package:flutter/material.dart';
-import 'package:todolist/models/todoList.dart';
 
 class CompletedTasks extends StatelessWidget {
   final TodoListModel todoList;
